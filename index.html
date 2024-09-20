@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A citation generator I built because why not.">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="BU Citation Generator">
+        <meta property="og:url" content="https://oscarstol12.github.io/BU-Citation-Generator/">
+        <meta property="og:description" content="This is a Citation Generator designed to automatically create citations for texts based on provided inputs.">
+        <meta property="og:image" content="https://oscarstol12.github.io/BU-Citation-Generator//images/bu-seal.png">
+
+        <link rel="icon" type="image/png" href="images/bu-seal.png">
+
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <h1> BU Citation Generator</h1>
+        <div class="text"> Number of Authors: </div>
+        <input type="number" class="txt-input" id="author-nos">
+        <div></div>
+        <button class="acceptor" onclick="handleNumberAuthors()">Enter</button>
+        <div class="authors" id="authors"></div>
+        <div class="text"> Year Published: </div>
+        <input type="number" class="txt-input" id="year-pub">
+        <div></div>
+        <button class="acceptor" onclick="handleYear()">Enter</button>
+        <div></div>
+        <div class="text"> Title of Paper: </div>
+        <input type="text" class="txt-input" id="pap-title">
+        <div></div>
+        <button class="acceptor" onclick="handleTitle()">Enter</button>
+        <div></div>
+        <div class="text"> Journal: </div>
+        <input type="text" class="txt-input" id="pap-journal">
+        <div></div>
+        <button class="acceptor" onclick="handleJournal()">Enter</button>
+        <div></div>
+        <div class="text"> Volume: </div>
+        <input type="text" class="txt-input" id="pap-vol">
+        <div></div>
+        <div class="text"> Issue: </div>
+        <input type="text" class="txt-input" id="pap-issue">
+        <div></div>
+        <button class="acceptor" onclick="handleVolumeIssue()">Enter</button>
+        <div></div>
+        <div class="text"> Page Start: </div>
+        <input type="number" class="txt-input" id="pg-start">
+        <div></div>
+        <div class="text">Page End: </div>
+        <input type="number" class="txt-input" id="pg-end">
+        <div></div>
+        <button class="acceptor" onclick="handlePaging()">Enter</button>
+        <div></div>
+        <button class="acceptor" style="width: 121px;" onclick="generateCitation()"> Generate Citation </button>
+        <div class="text" id="output"></div>
+    </body>
+</html>
