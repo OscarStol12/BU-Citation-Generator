@@ -43,7 +43,9 @@ function handleAuthorInput(author_no) {
     }
 
     if (author_no == authorcount) format += `.`;
-    else format += `,`;
+    else {
+        if (author_no != authorcount - 1) format += `,`;
+    }
     authors[`${author_no}`] = format;
     console.log(authors);
 }
